@@ -1,0 +1,2365 @@
+#---------------------
+# Settings
+#---------------------
+title: API Evangelist Location API
+description: This is a location API, providing many of the common building blocks of location. Providing the essential location ingredients needed through a variety of applications, without having to reinvent the wheel each times it is needed. This API is still being working on, and not quite ready for prime time, but if you have any questions, visit the road map and support sections below the documentation.
+url: http://location.apievangelist.com
+tag: Location, Cities, Regions, Countries
+logo: https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
+
+owner_name: Kin Lane
+owner_title: API Evangelist
+
+#-------------------------------
+# Current stage of this service
+#-------------------------------
+stage: development
+
+#---------------
+# Status Values
+#---------------
+status_values:
+  - None
+  - Not Used
+  - In Progress
+  - Active
+
+#---------------------
+# API Lifecycle Stops
+#---------------------
+stops:
+
+  #-------------
+  # Definitions
+  #-------------
+  - name: Definition
+    title: Definitions
+    description: All of the definitions that go into defining this service, from the original schema, the OpenAPI definitions, the Postman Collections, and the assertions that contribute to the testing of the service to ensure it is doing what is expected of it.
+    header: All of the definitions available for this service, providing a single way to find everything that drives the project.
+    footer: Providing a machine readable core for the entire lifecycle of this service, allowing documentation to be used elsewhere.
+    instructions: Define the problem and solution in a human and machine readable way.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-definitions.png
+    status: Active
+    items:
+
+      - name: Organization
+        description: The over-arching source control organization for this service, providing an umbrella for different development groups and projects.
+        instruction: Define the organization for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-organization.jpg
+        status: Active
+        fields:
+          - github_organization: api-evangelist-apis
+        services:
+          - name: GitHub
+            description: GitHub Inc. is a web-based hosting service for version control using Git, used for distributed version control and source code management functionality of Git.
+            url: https://github.com
+          - name: GitLab
+            description: GitLab is a web-based Git-repository manager with wiki, issue-tracking and CI/CD pipeline features.
+            url: https://about.gitlab.com/
+          - name: Bitbucket
+            description: Bitbucket is a web-based version control repository hosting service for source code and development projects that use either Mercurial or Git revision control systems.
+            url: https://bitbucket.org/
+        links:
+          - title: API Evangelist APIs
+            url: https://github.com/api-evangelist-apis
+
+      - name: Repository
+        description: The source control repository for this service, providing a self-contained, shareable, forkable way to engage with a service. Allowing for EVERYTHING involved with a service to be accessed in a single location.
+        instruction: Establish a Github repository.
+        status: Active
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-repository.jpg
+        fields:
+          - github_repository: locations
+        services:
+          - name: GitHub
+            description: GitHub Inc. is a web-based hosting service for version control using Git, used for distributed version control and source code management functionality of Git.
+            url: https://github.com
+          - name: GitLab
+            description: GitLab is a web-based Git-repository manager with wiki, issue-tracking and CI/CD pipeline features.
+            url: https://about.gitlab.com/
+          - name: Bitbucket
+            description: Bitbucket is a web-based version control repository hosting service for source code and development projects that use either Mercurial or Git revision control systems.
+            url: https://bitbucket.org/
+        links:
+          - title: Locations
+            url: https://github.com/api-evangelist-apis/locations
+
+      - name: README
+        description: The README for this services repository, providing an overview of the service, complete with all the relevant links to all the moving parts. Any user should be able to land on the README, and easily get up to speed on what a service delivers.
+        instruction: Craft a README for the repository.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-readme.png
+        status: Active
+        fields:
+          - readme_path: /README.md
+        services:
+          - name: GitHub
+            description: GitHub Inc. is a web-based hosting service for version control using Git, used for distributed version control and source code management functionality of Git.
+            url: https://github.com
+          - name: GitLab
+            description: GitLab is a web-based Git-repository manager with wiki, issue-tracking and CI/CD pipeline features.
+            url: https://about.gitlab.com/
+          - name: Bitbucket
+            description: Bitbucket is a web-based version control repository hosting service for source code and development projects that use either Mercurial or Git revision control systems.
+            url: https://bitbucket.org/
+        links:
+          - title: Locations README
+            url: https://github.com/api-evangelist-apis/locations/blob/master/README.md
+
+      - name: Service Name
+        description: A simple title for this service, describing what it does in concise terms, providing a simple way for any internal or external part to learn about the value it offers.
+        instruction: Provide title for the service.
+        status: Active
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-service-request.png
+        fields:
+          - service_name: API Evangelist Location API
+
+      - name: Service Description
+        description: A simple, descriptive paragraph for this service. Providing less that 250 words about what value this service delivers. Avoid just writing the obvious, and describing what an APIs, and focusing in on describing the value being delivered by this service.
+        instruction: Provide concise description for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-services.png
+        status: Active
+        fields:
+          - service_description: This is a location API, providing many of the common building blocks of location for use in any application. Providing the essential location ingredients needed through a variety of applications, without having to reivent the wheel each times it is needed. This API is still being working on, and not quite ready for prime time, but if you have any questions, visit the road map and support sections below the documentation
+
+      - name: Service Goals
+        description: Providing some basic goals for this service, helping clearly articulate why this service is being delivered, providing insight beyond the obvious about why this service is worthy of being developed, and operated in production.
+        instruction: Establish goals that will guide this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-gear-life-cycle.png
+        status: Active
+        fields:
+          - service_goals: This is the goals for this service.
+            goals:
+              - name: Provide Locations
+                descripton: Provide a set of cities, states, countries, and other location specific data for use across other applications.
+
+      - name: Schema
+        description: JSON schema for the data behind service, providing a stanalone JSON schema for use in other systems, applications, and services. Doing the heavy lifting of describing the objects, fields, types, and other technical details of the data behind this service.
+        instruction: Organize loose, and JSON schema for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-schema.png
+        status: Active
+        fields:
+          - title: Cities
+          - path: /json-schema/cities.json
+          - title: Regions
+          - path: /json-schema/regions.json
+          - title: Countries
+          - path: /json-schema/countries.json
+        tools:
+          - name: JSON Schema
+            description: JSON Schema is a vocabulary that allows you to annotate and validate JSON documents.
+            url: https://json-schema.org/
+          - name: JSON Schema Tools
+            description: A tool for managing JSON schema documents, and working with them to make sure they are complete.
+            url: https://www.jsonschema.net/
+
+      - name: OpenAPI
+        description: An OpenAPI definition for the surface area of the API, providing a machine readable contract for what this service delivers, that can be used across the API lifecycle, guiding everying aspect of delivering this service.
+        instruction: Establish an OpenAPI for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/openapi/openapi-icon.png
+        status: None
+        fields:
+          - openapi: /_data/openapi.yaml
+        tools:
+          - name: OpenAPI
+            description: The OpenAPI specification for describing the surface area of the API.
+            url: https://github.com/OAI/OpenAPI-Specification
+
+      - name: Domain
+        description: Considering the domain that this service fits into and exploring the sphere of knowledge and activity around the domain this service is delivering value within. Quantify the service domain, helping decompose from a larger domain, and helping focus what this service does, helping it do one things well.
+        instruction: Provide insight into the domain in which this service is operating.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-services.png
+        status: Active
+        elements:
+          - title: Context
+            description: Describing the setting and meaning the defines the value of this service.
+          - title: Model
+            description: The system of models used to define the elements of the domain this service.
+          - title: Language
+            description: The vocabulary and language used to help articulate the value this service delivers.
+          - title: Bounded Context
+            description:  Describing the boundaries of where this service operates and delivers value.
+        links:
+          - title: Domain-driven design
+            url: https://en.wikipedia.org/wiki/Domain-driven_design
+          - title: Restful Objects
+            url: https://en.wikipedia.org/wiki/Restful_Objects
+
+      - name: Event Storming
+        description: Event storming is a rapid, lightweight, and underappreciated group modeling technique that is intense, fun, and useful for accelerating development teams.
+        instruction: Engage in an event storming exercise to help model the domain.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-sticky-notes.png
+        status: Active
+        elements:
+          - title: Domain Event
+            description: The event that occurs within the domain as part of a service execution.
+          - title: Command
+            description: The trigger for the domain event occurring, setting it into motion.
+          - title: Actor
+            description: Defining who executes command to trigger event, and is making things happen.
+          - title: Aggregates
+            description:  Aggregates logically group various commands, events, and reactions together.
+        links:
+          - title: Event Storming (Wikipedia)
+            url: https://en.wikipedia.org/wiki/Event_storming
+          - title: Event Storming
+            url: https://www.eventstorming.com/
+
+      - name: Tags
+        description: Defining what the tagging taxonomy will be for applying across resources, for use in tagging across definitions, documentation, and infrastructure operations.
+        instruction: Provide a list of tags that will be used to organize schema, resources, infrastructure, and other elements of this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag.png
+        status: Active
+
+      - name: Assertions
+        description: Human and machine readable assertions of what service does, leveraging the existing JSON schema, and translating that into business objectives, asserting that a service does what it is supposed to.
+        instruction: Craft a set of assertions for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-assertions.png
+        status: Active
+        fields:
+          - assertions:
+            - title: The title of the assertion
+              path: /path/of/the/assertion
+
+      - name: Team
+        description: A list of team members for the service, providing a nice list of who is responsible for making a service operate.
+        instruction: Define the team behind the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-team-working.png
+        status: Active
+        fields:
+          - team:
+            - name: Kin Lane
+              role: API Evangelist
+              email: info@apievangelist.com
+              twitter: kinlane
+              github: kinlane
+
+  #--------
+  # Design
+  #--------
+  - name: Design
+    title: Design
+    description: The overall design of your API, the design patterns that are in use as part of the delivery of services. Providing a common set of patterns that can be used across services, beginning with REST, but also leverage hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+    header: The API design strategy for use as part of this service.
+    footer: Setting a consistent design strategy for all services.
+    instructions: Establish a base set of design practices for the service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-design.png
+    status: Active
+    tools:
+      - name: API Stylebook
+        description: An aggregate of API design style guides from different companies.
+        url: http://apistylebook.com/
+      - name: Swagger Editor
+        description: An editor for OpenAPI from SmartBear Swagger.
+        url: http://editor.swagger.io/
+      - name: OpenAPI GUI
+        description: A GUI API design editor for working with OpenAPI.
+        url: https://mermade.github.io/openapi-gui/
+      - name: Apicurio
+        description: A GUI API design editor for working with OpenAPI.
+        url: https://www.apicur.io/
+    links:
+      - title: Design (API Evangelist)
+        url: http://design.apievangelist.com/
+    items:
+
+      - name: Versioning
+        description: Managing the version for the various layers of this service, providing a plan for how data, code, API, and other artifacts will be versioning--having a plan for managing change across a service.
+        instruction: Determine how the code, schema, and the API be versioned.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-conversion.png
+        status: None
+        fields:
+          - versioning:
+            type: semantic
+            format: major.minor.patch
+            server: 1.0.0
+            api: 1.0.0
+            sdk: 1.0.0
+        links:
+          - title: Versioning (API Evangelist)
+            url: http://versioning.apievangelist.com/
+
+      - name: Base Path
+        description: The part of the path that goes after the host, and before each path, and is constant across all endpoints for this service.
+        instruction: Set the base path for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/base-path.png
+        status: Active
+        fields:
+          - url: /v1
+
+      - name: Path(s)
+        description: The paths that are used to define each individual API resource, providing a plain language descrption of a resource, with a meaningful, logical, structured path for accessing each individual resource.
+        instruction: Define a set of resource paths for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-path-resource.png
+        status: Active
+        fields:
+          - number_of_paths: 5
+
+      - name: Verb(s)
+        description: The HTTP verbs used for this service, including GET, POST, PUT, and DELETE.
+        instruction: Define which HTTP, and other verbs will be used for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-verbs.png
+        status: Active
+        fields:
+          - get: 2
+          - post: 1
+          - put: 1
+          - delete: 1
+        links:
+          - title: HTTP Request Methods
+            url: http://journey.apievangelist.com/journey/design/http-request-methods/
+
+      - name: Parameters
+        description: The query parameters that are used by this service, as described by the OpenAPI. Providing a list of parameters that can be used to define your API request dimensions.
+        instruction: Define a list of query parameters in use to work with service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-parameters.png
+        status: Active
+        fields:
+          - number_of_parameters: 3
+
+      - name: Headers
+        description: The headers that are used by this service, as described by the OpenAPI.
+        instruction: Define the HTTP Headers that will be used to work with the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-header-content-type.png
+        status: Active
+        fields:
+          - number_of_headers: 0
+        links:
+          - title: API Evangelist Journey - Headers
+            url: http://journey.apievangelist.com/journey/design/headers
+
+      - name: Body
+        description: Usage of the body as part of API requests as opposed to parameters, or in parallel to. Is the body used for POST, PUT, and other variations to help manage the payload.
+        instruction: Define the details of the body that will be used as part of making request to this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-body.png
+        status: Active
+        fields:
+          - number_of_bodies: 2
+
+      - name: Beyond Verbs With Actions
+        description: Consistently defining how actions will be designed beyond the usage of the common HTTP verbs.
+        instruction: Define how actions are being defined as part of this service beyond the usage of common HTTP verbs.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-resource-action.png
+        status: Active
+        links:
+          - title: Use RESTful URLs and actions
+            url: https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#restful
+          - title: RESTful URLs, Actions Need Not Apply
+            url: https://philsturgeon.uk/rest/2014/05/11/restful-urls-actions-need-not-apply/
+
+      - name: Media Types
+        description: The media types that are used by this service, as described by the OpenAPI. Providing multiple representations of a resource, allowing consumer to negotiate the type of content.
+        instruction: Define whether service will return CSV, JSON, and / or XML responses.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-media-type.png
+        status: Active
+        fields:
+          - json: 5
+          - xml: 0
+          - html: 0
+        links:
+          - title: HTML
+            url: https://www.iana.org/assignments/media-types/text/html
+          - title: CSV
+            url: https://www.iana.org/assignments/media-types/text/csv
+          - title: XML
+            url: https://www.iana.org/assignments/media-types/application/xml
+          - title: JSON
+            url: https://www.iana.org/assignments/media-types/application/json
+        tools:
+          - name: IANA Media Types
+            description: Media types that are defined by IANA.
+            url: https://www.iana.org/assignments/media-types/media-types.xhtml
+
+      - name: Status Codes
+        description: The HTTP status codes that are used by this service, as described by the OpenAPI. Leveraging the web to help understand what a service is doing at scale, as part of automated integration and consumption of a service.
+        instruction: Define the available HTTP status code for each responses.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-status-codes.png
+        status: Active
+        fields:
+          - 200: 5
+          - 300: 0
+          - 400: 0
+          - 500: 5
+        tools:
+          - name: Wikipedia List of HTTP status codes
+            description: A list of all HTTP status codes for reference.
+            url: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+      - name: Filtering
+        description: Allowing for the filtering of data returned as part of responses, leveraging paths, parameters, and other API building blocks to filter the responses a consumer will actually see.
+        instruction: Define how filtering will be handled for requests and responses.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-parameters.png
+        status: Active
+        fields:
+          - used: 1
+        links:
+          - title: OpenStack Pagination, Filtering, and Sorting
+            url: https://specs.openstack.org/openstack/api-wg/guidelines/pagination_filter_sort.html
+          - title: REST API Design, Filtering, Sorting, and Pagination
+            url: https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/
+
+      - name: Pagination
+        description: The pagination used by this service, providing the ability to break large responses down into smaller more manageable chunks.
+        instruction: Define how pagination will be handled for requests and responses.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-pagination.png
+        status: Active
+        fields:
+          - used: 1
+        links:
+          - title: OpenStack Pagination, Filtering, and Sorting
+            url: https://specs.openstack.org/openstack/api-wg/guidelines/pagination_filter_sort.html
+          - title: REST API Design, Filtering, Sorting, and Pagination
+            url: https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/
+
+      - name: Sorting
+        description: The sorting used by this service, allowing consumers to sort the responses they see and define what the order of data will be when consuming API resources.
+        instruction: Define how sorting will be handled for requests and responses.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-sorting.png
+        status: Active
+        fields:
+          - used: 1
+        links:
+          - title: OpenStack Pagination, Filtering, and Sorting
+            url: https://specs.openstack.org/openstack/api-wg/guidelines/pagination_filter_sort.html
+          - title: REST API Design, Filtering, Sorting, and Pagination
+            url: https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination/
+
+      - name: Response(s)
+        description: The responses that are used by this service, as described by the OpenAPI. Providing details regarding the response, and referencing the schema being returned as part of the response.
+        instruction: Provide a resulting message and associated schema definition for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-forward.png
+        status: Active
+        fields:
+          - number_of_headers: 5
+        tools:
+          - name: OpenAPI Response Object
+            description: Describes a single response from an API Operation, including design-time, static links to operations based on the response.
+            url: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#responseObject
+
+      - name: Errors
+        description: Defining a structure for error handling that leverages HTTP status codes, but goes further with a common schema definition.
+        instruction: Provide a schema definition, and apply error handling as part of the wider HTTP status code usage.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-error.png
+        status: Active
+        tools:
+          - name: Problem Details for HTTP APIs
+            description: This document defines a "problem detail" as a way to carry machine-readable details of errors in a HTTP response to avoid the need to define new error response formats for HTTP APIs.
+            url: https://tools.ietf.org/html/rfc7807
+        links:
+          - title: Best Practices for API Error Handling
+            url: https://nordicapis.com/best-practices-api-error-handling/
+
+      - name: Hypermedia
+        description: Emulating the patterns present in the web, and leverage existing hypermedia types to make APIs more resilient, evolvable, and flexible when it comes to client integration.
+        instruction: Leverage existing hypermedia media types as part of the design of the API.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-error.png
+        status: Active
+        tools:
+          - name: JSON API
+            description: JSON API is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests.
+            url: http://jsonapi.org/
+          - name: HAL
+            description: HAL is a simple format that gives a consistent and easy way to hyperlink between resources in your API.
+            url: http://stateless.co/hal_specification.html
+        links:
+          - title: API Evangelist Hypermedia Research
+            url: http://hypermedia.apievangelist.com/
+
+  #----------
+  # Database
+  #----------
+  - name: Database
+    title: Database
+    description: Defining the database layer behind this service, providing an isolated database for the access and storage of all data used as part of this service.
+    header: The database behind this service, acting as the data source for these resources.
+    footer: Providing a dedicated database resource for just this single service to use.
+    instructions: Establish the base for how data will be managed behind the service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-database-new.png
+    status: Active
+    items:
+
+      - name: Platform
+        description: The database platform used to drive this service, providing a dedicated database to just drive this service.
+        instruction: Define which platform is in use to manage the database.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-platform-layers.png
+        status: Active
+        fields:
+          - platform: Amazon RDS (Aurora)
+
+      - name: Schema
+        description: Making sure there is a database version of the schema, providing a raw dump and backup of the database behind this service.
+        instruction: Establish the schema used for database based upon definition provided.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-schema.png
+        status: Active
+        fields:
+          - schema: /sql/schema.sql
+        links:
+          - title: Schema Folder
+            url: https://github.com/api-evangelist-apis/locations/tree/master/json-schema
+
+      - name: Region
+        description: Where the database for this service is located, helping articulate if there is replication, or regional specific implementations or considerations for this service.
+        instruction: Define where the database is located that supports services.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-region.png
+        status: Active
+        fields:
+          - location: laneworks-large
+
+      - name: Access
+        description: How the database is connected with by the service, defining what connectivity is required, and what dependencies are involved with access.
+        instruction: Quantify how database access is provided behind the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-connector.png
+        status: Active
+        fields:
+          - access: ODBC
+
+      - name: Logs
+        description: Understanding how logging occurs for the database, what is turned on, and where logs are stored, and or shipped to as part of regular operations.
+        instruction: Define where the database logs are located that support services.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging-2.png
+        status: Active
+        fields:
+          - logs: /rds
+
+      - name: Backup
+        description: Ensuring that the database has a backup strategy, and the details of what is backed up and how long it is being backed up.
+        instruction: Define the database backup process and location for service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-backup.png
+        status: Active
+        fields:
+          - backup: /rds
+
+      - name: Encryption
+        description: Ensuring the encryption is part of the database operations, making sure data is being stored as part of the database behind this service.
+        instruction: Define the encryption layer for the service database.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-encryption.png
+        status: Active
+        fields:
+          - encryption: enabled
+
+  #---------
+  # Storage
+  #---------
+  - name: Storage
+    title: Storage
+    description: Defining the storage layer that is used as part of a services operation, providing a single strategy for managing the storage of objects used by this service.
+    header: The storage used for this service, where all objects are stored.
+    footer: Providing a single location this service to manage it's storage.
+    instructions: Establish how all objects will be stored for the service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-cloud-storage.png
+    status: Active
+    items:
+
+      - name: Platform
+        description: The platform that is used for storage behind this service.
+        instruction: Define which platform is used to store objects.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-platform-layers.png
+        status: Active
+        fields:
+          - platform: Amazon S3
+
+      - name: Region
+        description: Where the storage is located that is used for this service.
+        instruction: Define where objects are stored behind the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-region.png
+        status: Active
+        fields:
+          - region: us-east
+          - location: /api-evangelist-api-bucket/locations/
+
+      - name: Access
+        description: Details on how storage is accessed as part of this service.
+        instruction: Quantify how objects access is provided behind the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-connector.png
+        status: Active
+        fields:
+          - access: API
+
+      - name: Logs
+        description: Information about the logging for storage behind service.
+        instruction: Define where the storage logs are located that support services.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging-2.png
+        status: Active
+        fields:
+          - logs: /cloudwatch
+
+      - name: Backup
+        description: Ensuring there is a backup strategy for storage behind service.
+        instruction: Define the backup process for objects behind the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-backup.png
+        status: None
+        fields:
+          - backup: Dropbox
+
+      - name: Encryption
+        description: Ensuring encryption is considered for storage.
+        instruction: Define the encryption layer for stored objects.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-encryption.png
+        status: Active
+        fields:
+          - encryption: enabled
+
+  #-----
+  # DNS
+  #-----
+  - name: DNS
+    title: DNS
+    description: Managing the DNS for a service, ensuring it is part of a wider DNS strategy, and allows for isolation of this service within a specific domain namespace.
+    header: The DNS addressing used to route all traffic to this service.
+    footer: Using a single subdomain that can be used to access this resource.
+    instructions: Establish the DNS layer for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging-dns.png
+    status: Active
+    items:
+
+      - name: Platform
+        description: Which platform is used to provide DNS for service.
+        instruction: Define which platform is used to operate DNS.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-platform-layers.png
+        status: Active
+        fields:
+          - platform: CloudFlare
+        tools:
+          - name: CloudFlare
+            description: A next generation cloud DNS service provider.
+            url: https://www.cloudflare.com/
+          - name: Amazon Route 53
+            description: A next generation cloud DNS service provider.
+            url: https://aws.amazon.com/route53/
+
+      - name: Mock
+        description: The host used for the mock API.
+        instruction: Provide host for mock of service, being able to access a virtualized instance of an API.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-mock-interface.png
+        status: Active
+        fields:
+          - host: api.mock.locations.apievangelist.com
+
+      - name: Development
+        description: The host used for the development API, providing access to the version of API currently being developed.
+        instruction: Provide host for development version of service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-developer-tools.png
+        status: Active
+        fields:
+          - host: api.dev.locations.apievangelist.com
+
+      - name: Production
+        description: The host used for the production API, which is the address that should actually be used in applications.
+        instruction: Provide host for production version of service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-gears-working-api-economy.png
+        status: Active
+        fields:
+          - host: api.locations.apievangelist.com
+
+      - name: Portal
+        description: The host used for the developer portal, providing a single location that everyone can find what is happening around a service.
+        instruction: Provide host for the portal for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-portal-developers.jpg
+        status: Active
+        fields:
+          - host: locations.apievangelist.com
+
+      - name: Encryption
+        description: Ensuring encryption is used as part of API transport, and SSL is default for all services.
+        instruction: Define the encryption layer for service in transport.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-encryption.png
+        status: Active
+        fields:
+          - enabled: true
+
+  #----------------
+  # Virtualization
+  #----------------
+  - name: Virtualization
+    title: Virtualization
+    description: Providing mocked, sandbox, and virtualized instances of APIs and other data for understanding what an API does.
+    header: Mocked, sandbox, and virtualized instances of APIs and other data for understanding what an API does.
+    footer: Helping consumers understand what is possible when it comes to integrating and learning about an API.
+    instructions: Provide a mock representation of this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-virtualization.png
+    status: Not Used
+    links:
+      - title: Virtualization (API Evangelist)
+        url: http://virtualization.apievangelist.com/
+    items:
+
+      - name: Paths
+        description: Considering offering mock API paths for use by integrators, providing production-like instances of the API to use, and play with to provide feedback on API services.
+        instruction: Providing virtualized paths for the API driving service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-path-2.png
+        status: None
+        services:
+          - name: Mockable
+            description: Mockable is a simple configurable service to mock out RESTful API or SOAP web-services. Reply with static or dynamic JSON or XML Payload.
+            url: https://www.mockable.io/
+          - name: Mocklab
+            description: Rapidly simulate APIs for faster parallel development and more comprehensive testing
+            url: https://get.mocklab.io/
+        tools:
+          - name: Prism
+            description: Supercharge any OAS file with mocking, transformations, validations, and more.
+            url: https://stoplight.io/platform/prism/
+          - name: API Sprout
+            description: A simple, quick, cross-platform API mock server that returns examples specified in an API description document.
+            url: https://github.com/danielgtaylor/apisprout
+
+      - name: Data
+        description: Considering offering synethic data for use by integrators, helping ensure virtualized APIs provide as production like experience in a virtualized way.
+        instruction: Providing synthesized data behind each API response for service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-relational-data.png
+        status: None
+        tools:
+          - name: Synthea
+            description: Synthea is an open-source, synthetic patient generator that models the medical history of synthetic patients.
+            url: https://synthetichealth.github.io/synthea/
+
+
+  #------------
+  # Deployment
+  #------------
+  - name: Deployment
+    title: Deployment
+    description: Managing the actual deployment of an API into product, providing a common way in which APIs are deployed. Defining one, or many ways in which APIs can be put into production as part of any service.
+    header: The deployment of any service, and defining how it can be delivered into a production environment.
+    footer: Providing a strong framework for consistently delivering services across an organization.
+    instructions: Define the deployment scaffolding for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-deployment.png
+    status: None
+    services:
+      - name: Axway
+        description: API management platform offering a suite of services.
+        url: https://www.axway.com/en
+        status: None
+    links:
+      - title: Deployment (API Evangelist)
+        url: http://deployment.apievangelist.com/
+    items:
+
+      - name: Compute
+        description: The compute that is delivering this service.
+        instruction: Define the compute layer driving this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-servers.png
+        status: None
+        fields:
+          - platform: Amazon EC2
+        tools:
+          - name: Amazon EC2
+            description: The virtual compute instance service from Amazon.
+            url: https://aws.amazon.com/ec2/
+
+      - name: Framework
+        description: Which programming framework is used to deploy this service.
+        instruction: Define the code framework used to deploy service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-framework.png
+        status: None
+        fields:
+          - framework: none
+        tools:
+          - name: Slim
+            description: A PHP framework for delivering RESTful API frameworks.
+            url: https://www.slimframework.com/
+          - name: express-openapi
+            description: An unopinionated OpenAPI framework for express
+            url: https://www.npmjs.com/package/express-openapi
+
+      - name: Function
+        description: Which function is used to deploy this service.
+        instruction: Define the function(s) used to deploy service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png
+        status: None
+        fields:
+          - function: aws_lambda_function_name
+        services:
+          - name: AWS Lambda
+            description: AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.
+            url: https://aws.amazon.com/lambda/
+        tools:
+          - name: Node.js
+            description: The server side JavaScript Framework.
+            url: https://nodejs.org/en/
+          - name: AWS Node.js SDK
+            description: The Node.js SDK for working with all AWS services.
+            url: https://aws.amazon.com/sdk-for-node-js/
+
+      - name: Containers
+        description: Which container is used to deploy this service.
+        instruction: Define the container used to deploy service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-shipping-container.png
+        status: None
+        fields:
+          - container: none
+        services:
+          - name: Docker
+            description: Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+            url: https://www.docker.com/
+
+      - name: Gateway
+        description: Which gateway is used to deploy this service.
+        instruction: Define the gateway used to deploy service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-gateway.png
+        status: None
+        fields:
+          - platform: none
+        services:
+          - name: AWS API Gateway
+            description: Amazon's API gateway solution for deploying and managing APIs.
+            url: https://aws.amazon.com/api-gateway/
+
+      - name: Pipeline
+        description: Information regarding the pipeline in use for service.
+        instruction: Define the pipeline in place to build and deploys service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-pipeline.png
+        status: None
+        fields:
+          - pipeline: none
+        services:
+          - name: Jekins
+            description: Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems.
+            url: https://jenkins.io/
+
+      - name: Region
+        description: Information regarding which region this service is deployed.
+        instruction: Define where which region the service is deployed to.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-region.png
+        status: None
+        fields:
+          - region: us-east
+
+  #---------------
+  # Orchestration
+  #---------------
+  - name: Orchestration
+    title: Orchestration
+    description: The orchestration of the build and deliver of a service, defining how the technical building blocks are orchestrated to deliver the resulting service.
+    instructions: Define how the service will be orchestrated.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-conductor.png
+    status: None
+    items:
+
+      - name: Build
+        description: Information regarding the build of this service.
+        instruction: Define the build process for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-build.png
+        status: None
+        fields:
+          - build: manual
+
+      - name: Hooks
+        description: Information regarding pre or post commit hooks for this service.
+        instruction: Detail the pre and post commit hooks in use for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-hook.png
+        status: None
+        fields:
+          - hooks:
+            - name: Name of Hook
+              invoked: git commit
+              description: The description of the hook.
+              commands: /path/file_name
+
+      - name: Jobs
+        description: Information regarding the jobs used as part of this service.
+        instruction: Define the jobs being executed as part of this service operations.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-job-2.png
+        status: None
+        fields:
+          - jobs:
+            - name: Name of Job
+              description: Description of job.
+              openapi: /path/to/openapi/definition/for/job/
+              function: lambda_script_used_for_this_job
+
+      - name: Events
+        description: Information about events used for managing jobs for this service.
+        instruction: Define the events that are in play to help operate this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-events.png
+        status: None
+        fields:
+          - jobs:
+            - name: Name of Event
+              description: Description of event.
+
+      - name: Schedule
+        description: Information about the schedule sin use to manage this service.
+        instruction: Details of the schedules used to orchestrate this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-scheduling.jpeg
+        status: None
+        fields:
+          - jobs:
+            - name: Name of Schedule
+              description: Description of schedule.
+              command: command
+
+  #--------------
+  # Dependencies
+  #--------------
+  - name: Dependencies
+    title: Dependencies
+    description: Defining the dependencies associated with this service, helping quantifying what this service needs to do what it does successfully.
+    header:
+    footer:
+    instructions: Providing details of the dependencies that exist for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-depend.png
+    status: None
+    links:
+      - title: Dependencies (API Evangelist)
+        url: http://dependencies.apievangelist.com/
+    items:
+
+      - name: Service
+        description: Information about services this service depends on.
+        instruction: Details of other services this service depends upon.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-service-request.png
+        status: None
+        fields:
+          - name: Name of Service
+          - description: The description of service.
+          - url: http://example.com/service-information/
+
+      - name: Software
+        description: Information about software this service depends on.
+        instruction: Details of other software this service depends upon.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-software.png
+        status: None
+        fields:
+          - name: Name of Software
+          - description: The description of software.
+          - url: http://example.com/software-information/
+
+      - name: Data
+        description: Information about data this service depends on.
+        instruction: Details of other data this service depends upon.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-big-data-2.png
+        status: Active
+        fields:
+          - name: prograhammer/countries-regions-cities
+          - description: MySQL ready-to-use tables with countries, regions/states and cities of the world.
+          - url: https://github.com/prograhammer/countries-regions-cities
+
+      - name: People
+        description: Information about people this service depends on.
+        instruction: Details of other people this service depends upon.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-people.png
+        status: None
+        fields:
+          - name: Name of Person
+          - description: The description of person / relationship.
+          - email: info@example.com
+          - github_user: user
+
+      - name: Organization
+        description: Information about organization this service depends on.
+        instruction: Details of other organizations this service depends upon.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-organization.jpg
+        status: None
+        fields:
+          - name: Name of Organization
+          - description: The description of organization / relationship.
+          - email: info@example.com
+          - url: http://example.com
+
+  #--------------
+  # Authentication
+  #--------------
+  - name: Authentication
+    title: Authentication
+    description: Providing a standardized approach to authenticating with the service, allowing consumers to successfuly, and securely access a service.
+    header:
+    footer:
+    instructions: Details regarding authentication in use for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-padlock.png
+    status: Active
+    links:
+      - title: Authentication (API Evangelist)
+        url: http://authentication.apievangelist.com/
+    items:
+
+      - name: Type
+        description: Information how you authenticate with this service.
+        instruction: Define whether this service uses Basic Auth, API Keys, JWT, or OAuth for authentication.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/oauth-logo.png
+        status: None
+        fields:
+          - name: Basic Authentication
+            description: Basic auth leverages web standards for passing a username and password for authentication.
+            url: https://en.wikipedia.org/wiki/Basic_access_authentication
+            image: https://s3.amazonaws.com/kinlane-productions/bw-icons/oauth-logo.png
+            status: None
+          - name: API Key
+            description: Using an API key pass as query string, or as header for authentication.
+            url: https://en.wikipedia.org/wiki/Application_programming_interface_key
+            status: Active
+          - name: JSON Web Tokens
+            description: Industry standard RFC 7519 method for representing claims securely between two parties.
+            url: https://jwt.io/
+            status: None
+          - name: OAuth
+            description: A standard for token-based authentication and authorization, allowing an end user's account information to be used via API access.
+            url: https://oauth.net/
+            status: None
+
+      - name: Overview
+        description: An overview for the authentication of this service, helping users understand how they will access a service.
+        instruction: Provide a location of the page that delivers an overview of this services authentication.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-authentication-test.png
+        status: Active
+        fields:
+          - title: Authentication For The APIs
+          - header: This is the authentication for this API, providing you with the information you need to securely make API calls.
+          - footer: We try to keep API authentication as simple as possible, while also ensuring the data we provide is securely accessed.
+          - url: http://public.companies.apievangelist.com#authentication
+
+      - name: Signup / Login
+        description: An overview for the authentication of this service.
+        instruction: Provide a location of the page that delivers an overview of this services authentication.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
+        status: Active
+        fields:
+          - title: Signing Up / Logging In For The API
+          - header: I don't make you sign up for yet another account, we just use your OAuth from your GitHub, Twitter, or LinkedIn.
+          - footer: I'm not interested in your data, and do not pull any other data from your accounts beyond the scaope requested.
+          - url: http://public.companies.apievangelist.com#sign-up-login
+
+  #------------
+  # Management
+  #------------
+  - name: Management
+    title: Management
+    description: Having a consistent management layer for use across all APIs, applying a strategy for authentication, service composition, logging, analysis, and measuring value being generated at the gateway and management layers.
+    header: The management of this service, managing all access to APIs.
+    footer: Leveraging a proven solution for securing all resources provided.
+    instructions: Define the management layer for this service's API.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tools.png
+    status: Active
+    links:
+      - title: Management (API Evangelist)
+        url: http://management.apievangelist.com/
+    items:
+
+      - name: Platform
+        description: Details on which API management platform is used for this service.
+        instruction: Defining the platform used for the API management layer.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-platform-layers.png
+        status: Active
+        fields:
+          - platform: AWS API Gateway
+        services:
+          - name: Axway
+            description: API management platform offering a suite of services.
+            url: https://www.axway.com/en
+            status: None
+          - name: AWS API Gateway
+            description: Amazon's API gateway solution for deploying and managing APIs.
+            url: https://aws.amazon.com/api-gateway/
+            status: Active
+        tools:
+          - name: Kong
+            description: An open source API management solution, with enterprise options.
+            url: https://konghq.com/
+            status: None
+
+      - name: Administration
+        description: Where you find the administrative access for API management.
+        instruction: Provide a location for administrating the management layer.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-administrators.png
+        status: Active
+        fields:
+          - url: https://console.aws.amazon.com/apigateway/home?region=us-east-1
+
+      - name: Signup
+        description: Where you can sign up for access to this service.
+        instruction: Provide a location for users to signup for access to this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/
+
+      - name: Login
+        description: Where you can login for access to this service.
+        instruction: Provide a location for users to login to access to this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-login.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/
+
+      - name: Account
+        description: Where you can access accouint information when using service.
+        instruction: Provide a location for users to access a dashboard for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-account-settings.png
+        status: None
+        fields:
+          - url: https://example.com/account/
+
+      - name: Applications
+        description: Details about the developer's applications approved to use this service.
+        instruction: Provide a location for the applications that are approved to use service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-app-icon.jpg
+        status: None
+        fields:
+          - url: https://example.com/applications/
+
+  #---------
+  # Logging
+  #---------
+  - name: Logging
+    title: Logging
+    description: Having a consistent strategy for logging across the entire API stack, ensuring that logging is a first class citizen, and all activity across APIs is being stored, shipped, and made accessible across analysis systems and tooling.
+    header: The definitions for this service.
+    footer: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging-2.png
+    instructions: Define the logging layer for supporting this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-logging-2.png
+    status: Active
+    links:
+      - title: Logging (API Evangelist)
+        url: http://logging.apievangelist.com/
+    items:
+
+      - name: Database
+        description: Information about database logs.
+        instruction: Define the logging for the database layer.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-database-api.png
+        status: Active
+        fields:
+          - location: /rds
+
+      - name: API
+        description: Information about API logs.
+        instruction: Define the logging for the API access layer.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/api-commons-icon.png
+        status: Active
+        fields:
+          - location: /cloudwatch
+
+      - name: DNS
+        description: Information about DNS logs.
+        instruction: Define the logging for the DNS layer.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dns.png
+        status: Active
+        fields:
+          - location: /cloudflare
+
+      - name: Shipping
+        description: Information about shipping logs centrally to service's storage.
+        instruction: Define how logs are shipped or centralized for auditing.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-shpping.png
+        status: Active
+        fields:
+          - enabled: true
+          - location: /api-evangelist-api-bucket/locations/logs/
+
+  #--------------
+  # Monetization
+  #--------------
+  - name: Monetization
+    title: Monetization
+    description: Understanding what the costs associated with API development and operation are, tracking all the costs along the way so it can be used to help understand the value being generated, and drive the overall plan for operating a service.
+    header: Define the monetization history, and the details leading to a plan.
+    footer: Tracking on everything that goes into delivering this service.
+    instructions: Define the costs associated with the delivery of this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-monetization-strategy.png
+    status: Active
+    links:
+      - title: Monetization (API Evangelist)
+        url: http://monetization.apievangelist.com/
+    items:
+
+      - name: Acquisition
+        description: Understanding what it costs to acquire the resources behind this service.
+        instruction: Provide costs associated with acquisition of resources behind service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-acquisitions.png
+        status: Active
+        fields:
+          - initial_hours: 1
+          - initial_cost: $100.00
+          - monthly_hours: 1
+          - monthly_cost: $100.00
+
+      - name: Development
+        description: Understanding what it cost to develop this service.
+        instruction: Provide costs associated with the development of this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-developer-tools.png
+        status: Active
+        fields:
+          - initial_hours: 6
+          - initial_cost: $600.00
+          - monthly_hours: 0
+          - monthly_cost: 0
+
+      - name: Operation
+        description: Understanding what it costs to operate this service.
+        instruction: Provide costs associated with the operation of this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-manage-operations.png
+        status: Active
+        fields:
+          - initial_hours: 2
+          - initial_cost: $200.00
+          - monthly_hours: 2
+          - monthly_cost: $200.00
+
+      - name: Value
+        description: Articulating what value is provided by this service.
+        instruction: Provide a description of the value delivered by this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-value.png
+        status: Active
+        fields:
+          - description: Delivers X value for consumers by providing them Y.
+
+  #-------
+  # Plans
+  #-------
+  - name: Plans
+    title: Plans
+    description: Having one or many plans for accessing this service, ensuring that all consumption occurs through the filter of a plan, and fit into a wider platform management strategy.
+    header: These are the plans for accessing this service, providing different tiers of access depending on your needs, and what is allowed for this service. Each plan should have the details you need to understand the limitations, as well as other elements provided for the service at this tier.
+    footer: Currently there are just two plans available, if you have more needs than what is here, use one of the support channels to let us know what it is that you need. There are other levels available, but this is the standard public offering for this service at this moment in time.
+    instructions: Define the operational plan for the business of this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-plan.png
+    status: Active
+    links:
+      - title: Plans (API Evangelist)
+        url: http://plans.apievangelist.com/
+    items:
+
+      - name: Tiers
+        description: The tiers of access for this service.
+        instruction: Define the tiers of access in place to support this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tiers.jpg
+        status: Active
+        fields:
+
+          - plans:
+            - name: Starter
+              description: The default API access plan, where every new account begins, allowing the consumer to kick the tires, and see what the API is all about.
+              image: http://locations.apievangelist.com/assets/images/starter.png
+              status: Active
+              entries:
+                - label: API Calls
+                  description: The number of requests made to the API.
+                  metric: calls
+                  limit: 25
+                  timeframe: day
+                  geo: US
+                  one: 1
+                  two:
+                  unit: free
+              elements:
+                - name: Free
+                - name: Self Service Support
+
+            - name: Verified
+              description: Once you have added a credit card as part of the account billing, you become a verified API consumer, and have a higher rate limit for usage.
+              image: http://locations.apievangelist.com/assets/images/verified.png
+              status: Active
+              entries:
+                - label: API Calls
+                  description: The number of requests made to the API.
+                  metric: calls
+                  limit: Pay As You Go
+                  timeframe: day
+                  geo: US
+                  one: 1
+                  two:
+                  unit: .0025
+              elements:
+                - name: Support
+                - name: Sales
+                - name: Security
+                - name: SLA
+
+  #--------
+  # Portal
+  #--------
+  - name: Portal
+    title: Portal / Landing Page
+    description: Providing one, or many public or private portals, providing a single known location for API proviers and API consumers to find what they are looking for when it comes to API integration with services being made available.
+    header: The portal landing page for this service, providing a single location to access the service.
+    footer: Providing a single known location discovery and return when information about service is needed.
+    instructions: Define the public or private portal in use to present this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-portal-developers.jpg
+    status: Active
+    links:
+      - title: Portal (API Evangelist)
+        url: http://portal.apievangelist.com/
+    services:
+      - name: APIMATIC
+        description: Instantly build an API Portal with SDKs, Live Code Samples, Test Cases, API.
+        url: https://apimatic.io/
+    tools:
+      - name: Minimum Viable API Portal Template
+        description: A minimum API documentation template developed by James Higginbotham and Hillary Fraley.
+        url: https://launchany.github.io/mvd-template/
+    items:
+
+      - name: Hosting
+        description: Information about the hosting service used for this portal.
+        instruction: Provide details on where this service portal is hosted.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-hosting.png
+        status: Active
+        fields:
+          - host: Github Pages
+        tools:
+          - name: Github Pages
+            description: Hosted as a static Jekyll site as part of the GitHub repository for the service.
+            url: https://pages.github.com/
+
+      - name: Template
+        description: Information regarding the UI template used for this portal.
+        instruction: Define which graphical UI and brand template is in use for this portal.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-data-template.png
+        status: Active
+        fields:
+          template: HTML5 Up
+        tools:
+          - name: HTML5 Up
+            description: A HTML, CSS, and JavaScript Jekyll template.
+            url: https://html5up.net/
+
+      - name: Analytics
+        description: Information about the analytics in use for tracking on this portal.
+        instruction: Define which analytics package is used to measure traffic for portal.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-analytics-2.png
+        status: None
+        fields:
+          - analytics:
+              - Google Analytics
+              - Github Analytics
+        tools:
+          - name: Google Analytics
+            description: Using embedded Google Analytics for managing traffic.
+            url: https://analytics.google.com/analytics/web/
+          - name: Github Analytics
+            description: Using embedded Google Analytics for managing traffic.
+            url: https://blog.github.com/2014-01-07-introducing-github-traffic-analytics/
+
+
+  #-----------------
+  # Getting Started
+  #-----------------
+  - name: Getting Started
+    title: Getting Started
+    description: Providing basic getting started information for dvelopers to use when on-boarding.
+    header: These are the steps you need to take when getting started using this service.
+    footer: If you have any questions, feel free to reach out, and I'll do my best to help.
+    instructions: Provide a getting started page for this service within portal.
+    image: http://locations.apievangelist.com/assets/images/getting-started.png
+    status: Active
+    links:
+      - title: Getting Started (API Evangelist)
+        url: http://getting-started.apievangelist.com/
+    items:
+
+      - name: Signup
+        title: Signup
+        description: Where you can signup for this service.
+        instruction: Provide a link to where users can signup for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
+        status: None
+        fields:
+          url: http://locations.apievangelist.com/#sign-up
+
+      - name: Authentication
+        title: Authentication
+        description: Where you can get details about authenticating with this service.
+        instruction: Provide a link to the authentication overview for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-padlock.png
+        status: None
+        fields:
+          - url: http://locations.apievangelist.com/#authentication
+
+      - name: Documentation
+        title: Documentation
+        description: Where you can find documentation for this service.
+        instruction: Provide a link to the documentation for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation-interactive.png
+        status: None
+        fields:
+          - url: http://locations.apievangelist.com/#documentation
+
+      - name: SDKs
+        title: SDKs
+        description: Where you can find SDKs in multiple programming languages for this service.
+        instruction: Provide a link to where users can find SDKs and code libraries for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-sdk.png
+        status: None
+        fields:
+          - url: http://locations.apievangelist.com/#sdks
+
+      - name: FAQ
+        title: FAQ
+        description: Where you can get your common questions answered around this service.
+        instruction: Provide a link to to the frequently asked questions for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-question-mark.png
+        status: None
+        fields:
+          - url: http://locations.apievangelist.com/#faq
+
+      - name: Support
+        title: Support
+        description: Where you can get support for using this service.
+        instruction: Provide a link to where users can get support for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
+        status: None
+        fields:
+          - url: http://locations.apievangelist.com/#support
+
+  #---------------
+  # Documentation
+  #---------------
+  - name: Documentation
+    title: Documentation
+    description: Ensuring that there is always comprehensive, up to date, and if possible interactive API documentation available for all APIs, providing developers with everything they need to understand what an API does, and successfully integrate APIs into their applications.
+    header: This is the interactive API documentation for this API, and when you are authenticated, will allow you to make API calls, and see the responses for each API path.
+    footer: This documentation is generated from the OpenAPI definition for this API, which you can use to publish, syndicate, and integrate with this API documentation elsewhere.
+    instructions: Provide documentation for this service within portal.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation-interactive.png
+    status: Active
+    links:
+      - title: Documentation (API Evangelist)
+        url: http://documentation.apievangelist.com/
+    items:
+
+      - name: Paths
+        description: Documentng the API paths that are available for this service.
+        instruction: Publish an interactive list of API paths available for service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-path-2.png
+        status: Active
+        fields:
+          - status: active
+          - url: http://locations.apievangelist.com/#documentation
+
+      - name: Schema
+        title: Schema
+        header: These are the schema definitions in use for this service, providing a human, and machine readable listing of the schema used as part of requests and responses for this service.
+        footer: This should provide you with what you need to understand the structure of how you make requests to some of the APIs, and what you can expect with each of the API responses.
+        description: The descriptive header and footer paragraphs for the documentation schema.
+        instruction: Provide some content to introduce and close up the documentation schema.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-schema.png
+        status: Active
+        fields:
+          - status: Active
+          - url: http://locations.apievangelist.com/#schema
+
+      - name: Examples
+        description: Examples of using the API paths for this service.
+        instruction: Provide as many examples of API requests in a variety of languages.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-example.png
+        status: None
+        fields:
+          - enabled: true
+          - url: http://example.com/#examples
+
+      - name: Definitions
+        header: We provide machine readable definitions for our APIs, allowing you to import into the service or tooling of your choice.
+        footer: Feel free to submit a pull request for these API definitions using GitHub, or submit an issue when you see something incomplete.
+        description: The machine reaable API definitions for use as part of this service.
+        instruction: Publish a list of schema definitions in use by this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-definitions.png
+        status: Active
+        fields:
+          - enabled: true
+          - openapi: http://example.com/openapi/
+          - postman: http://example.com/postman/
+
+      - name: Errors
+        description: Details about the errors encountered using this service.
+        instruction: Provide a list of available errors users will encounter for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-error.png
+        status: None
+        fields:
+          - enabled: true
+
+  #------
+  # Code
+  #------
+  - name: Code
+    title: Code / Libraries / SDKs
+    description: Providing code samples, libraries, SDKs, and other solutions in a variety of languages, and for a variety of platforms, helping do much of the heavy lifting that is required when it comes to putting an API to use in applications, and system to system integration.
+    header: These are the code samples, libraries, and SDKs we provide in a variety of programming languages, helping jumpstart your integration with the API.
+    footer: If there isn't a language library you need available, make sure and let us know through one of the support channels, so we can consider for the road map.
+    instructions: Providing code samples, libraries, or complete software development kits (SDKs).
+    image: http://locations.apievangelist.com/assets/images/code.png
+    status: Active
+    services:
+      - name: APIMATIC
+        description: Instantly build an API Portal with SDKs, Live Code Samples, Test Cases, API.
+        url: https://apimatic.io/
+      - name: REST United
+        description: Just 5 simple steps to generate SDKs (REST API libraries) in 9 programming languages
+        url: https://restunited.com/
+    tools:
+      - name: Swagger Codegen
+        description: Swagger Codegen can simplify your build process by generating server stubs and client SDKs for any API.
+        url: https://swagger.io/tools/swagger-codegen/
+    items:
+
+      - name: PHP
+        description: This is the PHP SDK for integrating with this service.
+        instruction: Provide a PHP SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-php.png
+        status: Active
+        fields:
+          - url: http://example.com/php/
+
+      - name: Python
+        description: This is the Python SDK for integrating with this service.
+        instruction: Provide a Python SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-python.png
+        status: Active
+        fields:
+          - url: http://example.com/python/
+
+      - name: Ruby
+        description: This is the Ruby SDK for integrating with this service.
+        instruction: Provide a Ruby SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-ruby.png
+        status: Active
+        fields:
+          - url: http://example.com/ruby/
+
+      - name: Go
+        description: This is the Go SDK for integrating with this service.
+        instruction: Provide a Go SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-go.png
+        status: Active
+        fields:
+          - url: http://example.com/go/
+
+      - name: Java
+        description: This is the Java SDK for integrating with this service.
+        instruction: Provide a Java SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-java.png
+        status: Active
+        fields:
+          - url: http://example.com/java/
+
+      - name: C#
+        description: This is the C# SDK for integrating with this service.
+        instruction: Provide a C# SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-c-sharp.png
+        status: Active
+        fields:
+          - url: http://example.com/csharp/
+
+      - name: Node.js
+        description: This is the Node.js SDK for integrating with this service.
+        instruction: Provide a Node.js SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-node.png
+        status: Active
+        fields:
+          - url: http://example.com/node/
+
+      - name: JavaScript
+        description: This is the JavaScript SDK for integrating with this service.
+        instruction: Provide a JavaScript SDK.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code-javascript.png
+        status: Active
+        fields:
+          - url: http://example.com/javascript/
+
+  #-----------
+  # Licensing
+  #-----------
+  - name: Licensing
+    title: Licensing
+    description: Ensuring that all of the licensing for the entire API stack has been considered, providing references for the licenses of each layer of API operations, and even dependencies whenever possible.
+    header: This is what you need to know regarding the licensing of resources that are available as part of this service, breaking down the license applied to each component.
+    footer: If you have any questions on licensing of code, data, or other aspect of this service, please use one of the support channels to give us more detail on your licensing query.
+    instructions: Provide a set of licensing in place for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-license.png
+    status: Active
+    links:
+      - title: Licensing (API Evangelist)
+        url: http://licensing.apievangelist.com/
+    items:
+
+      - name: Server
+        title: Server Licensing
+        description: The licensing for the server code behind this service.
+        instruction: Define how all backend server code is licensed for this service.
+        image: http://locations.apievangelist.com/assets/images/mit-license.png
+        status: Active
+        fields:
+          - name: MIT
+          - url: https://opensource.org/licenses/MIT
+          - image: http://locations.apievangelist.com/assets/images/mit-license.png
+
+      - name: Data
+        title: Data Licensing
+        description: Licensing for the data used as part of this service.
+        instruction: Define how all data and schema is licensed for this service.
+        image: http://locations.apievangelist.com/assets/images/okfn.png
+        status: Active
+        fields:
+          - name: ODbL
+          - url: https://opendatacommons.org/licenses/odbl/1-0/
+          - image: http://locations.apievangelist.com/assets/images/okfn.png
+
+      - name: API
+        title: API Licensing
+        description: Licensing for the API interface for this service.
+        instruction: Define how the API definition is licensed for this service.
+        image: http://locations.apievangelist.com/assets/images/cc-by.png
+        status: Active
+        fields:
+          - name: CC-BY
+          - url: https://creativecommons.org/licenses/by/2.0/
+          - image: http://locations.apievangelist.com/assets/images/cc-by.png
+
+      - name: SDKs
+        title: SDK Licensing
+        description: Licensing for the SDKs provided for this service.
+        instruction: Define how all client code is licensed for this service.
+        image: http://locations.apievangelist.com/assets/images/mit-license.png
+        status: Active
+        fields:
+          - name: MIT
+          - url: https://opensource.org/licenses/MIT
+          - image: http://locations.apievangelist.com/assets/images/mit-license.png
+
+  #----------
+  # Support
+  #----------
+  - name: Support
+    title: Support
+    description: Ensuring that each individual API has the necessary support, making sure that the support channels for a service are easy to find, have a responsive and knowledgeable person available to answer questions, and is being measured and audited for quality.
+    header: We provide three ways in which you can receive support for this API, and have your questions answered as you are working to integrate it into your web or mobile application.
+    footer: If your question is of the private nature please email us, for all other inquires please submit as GitHub issue if possible, so that others can learn from your question to.
+    instructions: Establish the support apparatus in place for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png
+    status: Active
+    links:
+      - title: Support (API Evangelist)
+        url: http://support.apievangelist.com/
+    items:
+
+      - name: Email
+        title: Email
+        description: The email account for supporting this service.
+        instruction: Define the email account used to support this service.
+        image: http://locations.apievangelist.com/assets/images/email.png
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-email.png
+        status: Active
+        fields:
+          - email: mailto%3A info@apievangelist.com
+
+      - name: GitHub Issues
+        title: GitHub Issues
+        description: Where to submit an issue to get support for this service.
+        instruction: Provide a URL to the repository issues to support this service.
+        image: http://locations.apievangelist.com/assets/images/github.png
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png
+        status: Active
+        fields:
+          - url: https://github.com/api-evangelist-apis/locations/issues
+
+      - name: Twitter
+        title: Twitter
+        description: Where to get support publicly using a supported Twitter account
+        instruction: Provide the URL to the Twitter account supporting the API.
+        image: http://locations.apievangelist.com/assets/images/twitter.png
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png
+        status: Active
+        fields:
+          - url: https://twitter.com/apievangelist/
+
+      - name: Ticket
+        title: Ticket
+        description: Where to submit a ticket to get support for this service.
+        instruction: Provide a URL to the ticketing system used to support this service.
+        image: http://locations.apievangelist.com/assets/images/twitter.png
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-ticket-system.png
+        status: None
+        fields:
+          - url: http://example.com/tickets/
+
+  #------
+  # FAQs
+  #------
+  - name: FAQs
+    title: Frequently Asked Questions (FAQ)
+    description: Providing a self-service listing of the most common questions that get asked of a service, so that API consumers will to have to ask the question, and put support channels to work, resulting in additional resources being required to support the platform.
+    header: These are the frequently asked questions (FAQ) for this service, reflecting the questions most asked by consumers of this service.
+    footer: If you have a question, and you don't find the answer listed here, feel free to use one of the support channels above to get it answered.
+    instructions: Publish a list of the frequently asked questions (FAQ) for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-question-mark.png
+    status: None
+    items:
+
+      - name: Categories
+        description: The categories of FAQ questions.
+        instruction: Break all questions down by logical categories.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-category.png
+        status: None
+        fields:
+          - categories:
+            - Category One
+            - Category Two
+            - Category Three
+            - Category Four
+
+      - name: Questions
+        description: The questions asked about this service.
+        instruction: Publish a list of questions with answers within each category.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-gears-questions.png
+        status: None
+        fields:
+          - questions:
+            - question: Question One
+              answer: This is the short, precise answer to question number one.
+              category: Category One
+            - question: Question Two
+              answer: This is the short, precise answer to question number two.
+              category: Category One
+            - question: Question One
+              answer: This is the short, precise answer to question number one.
+              category: Category Two
+            - question: Question Two
+              answer: This is the short, precise answer to question number two.
+              category: Category Two
+            - question: Question One
+              answer: This is the short, precise answer to question number one.
+              category: Category Three
+            - question: Question Two
+              answer: This is the short, precise answer to question number two.
+              category: Category Three
+            - question: Question One
+              answer: This is the short, precise answer to question number one.
+              category: Category Four
+            - question: Question Two
+              answer: This is the short, precise answer to question number two.
+              category: Category Four
+
+      - name: Ask Question
+        description: Asking a question about this service.
+        instruction: Provide a form for users to ask a new question.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-question-shared.png
+        status: None
+        fields:
+          - title: Ask a Question
+          - description: This is the description of asking question.
+          - url: http://example.com/ask/
+
+  #---------------
+  # Communication
+  #---------------
+  - name: Communication
+    title: Staying In Tune
+    description: Having a comprehensive communication strategy for a service, ensuring that each service is properly communicating with other teams, stakeholders, and API consumers. Providing a regular stream of information regarding what is happening with the service.
+    header: Here are the commmunication channels provided to you, helping you stay in tune with what is changing with this service, and the overall platform behind it.
+    footer: These channels should provide you with a regular hearbeat of the changes being made, and what is being planned as part of this platform's operations.
+    instructions: Establish a communication strategy for this service.
+    image: http://locations.apievangelist.com/assets/images/communication.png
+    status: Active
+    links:
+      - title: Communication (API Evangelist)
+        url: http://communication.apievangelist.com/
+    items:
+
+      - name: Blog
+        title: Blog
+        description: The blog for this service.
+        instruction: Provide a simple blog and update mechanism for this service.
+        image: http://locations.apievangelist.com/assets/images/blog.png
+        status: Active
+        fields:
+          - url: http://example.com/blog/
+          - atom: http://example.com/atom/
+
+      - name: Twitter
+        title: Twitter
+        description: The Twitter account for this service.
+        instruction: Provide the Twitter handle that is used as part of this service.
+        image: http://locations.apievangelist.com/assets/images/twitter.png
+        status: Active
+        fields:
+          - handle: http://twitter.com/handle/
+
+      - name: Github
+        title: Github
+        description: The Github account for this service.
+        instruction: Provide the Github account or organization behind this service.
+        image: http://locations.apievangelist.com/assets/images/github.png
+        status: Active
+        fields:
+          - handle: http://github.com/handle/
+
+      - name: Internal
+        title: Internal
+        description: Internal communication channel for this service.
+        instruction: Provide a location where internal communication is available.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-internal.png
+        status: None
+        fields:
+          - url: http://example.com/private-comm/
+
+      - name: External
+        title: External
+        description: External communication channels for this service.
+        instruction: Provide a location where public communication is available.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-external.png
+        status: None
+        fields:
+          - url: http://example.com/communication/
+
+  #----------
+  # Road Map
+  #----------
+  - name: Road Map
+    title: Road Map
+    description: Providing API consumers with as much information as possible about what changes are being planned for a service. Helping include consumers in the conversation about what is being planned whenever possible.
+    instructions: Provide a road map for the future of this service.
+    header: This is what we plan on doing in the near future when it comes to evolving this service, documenting the features we are planning to add to this service in future iterations.
+    footer: We try to share as much information as possible about what changes will be occurring, helping you plan for your integration--make sure and share your thoughts about what you'd like to see.
+    image: http://locations.apievangelist.com/assets/images/road-map.png
+    status: Active
+    links:
+      - title: Road Map (API Evangelist)
+        url: http://road-map.apievangelist.com/
+    items:
+
+      - name: Private
+        title: Private Road Map
+        description: Where you can access the private road map for this service.
+        instruction: Publish a private, internal version of entries for the road map.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-privacy.png
+        status: None
+        fields:
+          - url: http://example.com/private-road-map/
+
+      - name: Public
+        title: Road Map
+        description: Where you can access the public road map for this service.
+        instruction: Publish a publicly available version of entries for the road map.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-revenue-public-data.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/#road-map
+          - entries:
+            - title: Roadmap Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Roadmap Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Roadmap Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Roadmap Item
+              date: 1/1/2019
+              description: This is a description for the item.
+
+      - name: Suggest
+        title: Suggestions For The Road Map
+        description: Consumers are welcome to suggest an addition to the road map.
+        instruction: Provide a mechanism for users to make suggestions for the road map.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-suggest.png
+        status: Active
+        fields:
+          - title: Suggest Road Map Item
+          - description: Make Suggestion
+          - url: https://github.com/api-evangelist-apis/locations/issues
+
+  #--------
+  # Issues
+  #--------
+  - name: Issues
+    title: Issues
+    description: Being transparent around the issues that are currently outstanding regarding a platform. Potentially saving resources having to respond to further emails, tickets, and issues being reported.
+    header: These are the current issues that are outstanding for this service at the moment--letting you know that we are working hard to fix.
+    footer: We provide visibility into these issues because we want to be as transparent as possible with what is happening with the service.
+    instructions: Provide a list of currently known issues for this service.
+    image: http://locations.apievangelist.com/assets/images/issues.png
+    status: Active
+    links:
+      - title: Issues (API Evangelist)
+        url: http://issues.apievangelist.com/
+    items:
+
+      - name: Entries
+        description: Listing of all the outstanding issues for this service.
+        instruction: Publish a list of all known issues currently outstanding.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-exclamation-circle.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/#issues
+          - entries:
+            - title: Issue Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Issue Item
+              date: 1/1/2019
+              description: This is a description for the item.
+
+      - name: Report
+        description: Reporting an issue for this service.
+        instruction: Provide a mechanism for users to report issues.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-understand-hard.png
+        status: Active
+        fields:
+          - title: Report An Issue
+          - description: Report
+          - url: https://github.com/api-evangelist-apis/locations/issues
+
+  #------------
+  # Change Log
+  #------------
+  - name: Change Log
+    title: Change Log
+    description: Provide consumers with a detail history of what has changed in the past with a service. Rolling over road map items, and  issues when they have been accomplished or satisfied into a detailed change log.
+    header: This is a detailed list of everything that has changed with this platform, providing you with the history of what has happened over time with this service.
+    footer: Showing our track record when it comes to changes being made to this platform, showing the work we've done to deliver on our road map, and satisfy all the open issue.
+    instructions: Providing a historical list of what has changed for this service.
+    image: http://locations.apievangelist.com/assets/images/change-log.png
+    status: Active
+    links:
+      - title: Change Log (API Evangelist)
+        url: http://change-log.apievangelist.com/
+    items:
+
+      - name: Entries
+        title: Entries
+        description: Providing a list of what has changed with this platform along with each road map item being accomplished, and issue being resolved.
+        instruction: Publish a list of all road map and issue entries that have been satisfied for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-two-arrows.png
+        status: Active
+        fields:
+          - url: http://example.com/change-log/
+          - entries:
+            - title: Change Log Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Change Log Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Change Log Item
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Change Log Item
+              date: 1/1/2019
+              description: This is a description for the item.
+
+  #-------
+  # Legal
+  #-------
+  - name: Legal
+    title: The Legal Department
+    description: Covering the legal bases when it comes to operating a service, ensuring there are terms of service, privacy policies, and the other legal aspects of delivering a service online, with partners, and even internally with an organization.
+    header: This is the legal department for this service, with all the details you will need to comply with usage of this service.
+    footer: If you have any questions about the legal documents provided here, you can contact us through one of the support channels.
+    instructions: Provide a set of legal documents guiding the service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-legal.png
+    status: Active
+    items:
+
+      - name: Terms of Service
+        description: The terms of service (TOS) for this service.
+        instruction: Provide a terms of service for this service to operate within.
+        image: http://locations.apievangelist.com/assets/images/terms.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/terms-of-service/
+
+      - name: Privacy Policy
+        description: The privacy policy for this service.
+        instruction: Provide a privacy policy for this service to operate within.
+        image: http://locations.apievangelist.com/assets/images/privacy.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/privacy-policy/
+
+      - name: Service Level Agreement
+        description: The service level agreement (SLA) for this service.
+        instruction: Provide a service level agreement (SLA) for this service to operate within.
+        image: http://locations.apievangelist.com/assets/images/sla.png
+        status: Active
+        fields:
+          - url: http://locations.apievangelist.com/service-level-agreement/
+
+  #------------
+  # Monitoring
+  #------------
+  - name: Monitoring
+    title: Monitoring
+    description: Making sure all aspects of a service is being monitored, understanding the overall availability of a service, and whether or not a service is being delivered as expected, and meeting the SLA as promised.
+    header: The definitions for this service.
+    footer:
+    instructions: Defining the uptime monitoring for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-heart-monitor.png
+    status: None
+    services:
+      - name: API Fortress
+        description: A complete API testing solution for companies that care about their APIs. Test during development, deployments, and live monitoring.
+        url: https://apifortress.com/
+      - name: APIMetrics
+        description: Enterprise and Banking ready, API testing, performance monitoring, SLA management, compliance monitoring and analysis.
+        url: https://apimetrics.io/
+    links:
+      - title: Monitoring (API Evangelist)
+        url: http://monitoring.apievangelist.com/
+    items:
+
+      - name: Monitors
+        description: The monitors for this service.
+        instruction: Establish the monitors for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-monitors.png
+        status: None
+        fields:
+          - name: Monitor Name
+          - description: The description of the monitor.
+          - url: http://example.com/sla/
+
+      - name: Status
+        description: The status of this service.
+        instruction: Provide real time details of monitor activity.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-status-dashboard.png
+        status: None
+        fields:
+          - entries:
+            - title: Monitor Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Monitor Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Monitor Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Monitor Status
+              date: 1/1/2019
+              description: This is a description for the item.
+          - embed: <embed code>
+
+  #---------
+  # Testing
+  #---------
+  - name: Testing
+    title: Testing
+    description: Going beyond just testing, and making sure that a service is being tested at a granular level, using schema for validation, and making sure each service is doing exactly what it should, and nothing more.
+    header: The definitions for this service.
+    footer:
+    instructions: Defining the testing for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-testing.png
+    status: None
+    services:
+      - name: API Fortress
+        description: A complete API testing solution for companies that care about their APIs. Test during development, deployments, and live monitoring.
+        url: https://apifortress.com/
+      - name: APIMetrics
+        description: Enterprise and Banking ready, API testing, performance monitoring, SLA management, compliance monitoring and analysis.
+        url: https://apimetrics.io/
+    links:
+      - title: Testing (API Evangelist)
+        url: http://testing.apievangelist.com/
+    items:
+
+      - name: Assertions
+        description: The assertions for this service.
+        instruction: Provide details of the assertions being tested for.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-assertions.png
+        status: None
+        fields:
+          - assertions:
+            - title: Assertion Title
+              description: This is a description for the assertion.
+              url: http://example.com/assertion/
+            - title: Assertion Title
+              description: This is a description for the assertion.
+              url: http://example.com/assertion/
+            - title: Assertion Title
+              description: This is a description for the assertion.
+              url: http://example.com/assertion/
+            - title: Assertion Title
+              description: This is a description for the assertion.
+              url: http://example.com/assertion/
+
+      - name: Results
+        description: The results of assertions tested against this service.
+        instruction: Provide real time details of testing activity.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-results.png
+        status: None
+        fields:
+          - entries:
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+
+  #-------------
+  # Performance
+  #-------------
+  - name: Performance
+    title: Performance
+    description: Testing each service for performance, benchmarking the speed in which resources are being delivered from multiple regions, working to understand and establish what the baseline speed for each API is, and understanding if the service is meeting, or falling beneath expectations.
+    header: The definitions for this service.
+    footer:
+    instructions: Defining the performance monitoring for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-performance.png
+    status: None
+    links:
+      - title: Performance (API Evangelist)
+        url: http://performance.apievangelist.com/
+    services:
+      - name: API Fortress
+        description: A complete API testing solution for companies that care about their APIs. Test during development, deployments, and live monitoring.
+        url: https://apifortress.com/
+      - name: APIMetrics
+        description: Enterprise and Banking ready, API testing, performance monitoring, SLA management, compliance monitoring and analysis.
+        url: https://apimetrics.io/
+    items:
+
+      - name: Tests
+        description: The performance tests for this service.
+        instruction: Provide details of the performance testing in place for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-test.png
+        status: None
+        fields:
+          - assertions:
+            - title: Performance Test Title
+              description: This is a description for the test.
+              url: http://example.com/assertion/
+            - title: Performance Test Title
+              description: This is a description for the test.
+              url: http://example.com/assertion/
+            - title: Performance Test Title
+              description: This is a description for the test.
+              url: http://example.com/assertion/
+            - title: Performance Test Title
+              description: This is a description for the test.
+              url: http://example.com/assertion/
+
+      - name: Results
+        description: The results of performance test for this service.
+        instruction: Provide real time details of performance testing activity.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-results.png
+        status: None
+        fields:
+          - entries:
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+
+  #----------
+  # Security
+  #----------
+  - name: Security
+    title: Security
+    description: Going beyond authentication, encryption and other aspects of security, and working to scan the surface area of APIs to ensure that there are no vulnerabilities, and that APIs are not doing anything they should not be doing. Keeping services secure, and operating reliabily.
+    header: The definitions for this service.
+    footer:
+    instructions: Defining the security practices in place for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/api-security.png
+    status: None
+    tools:
+      - name: OWASP Zap
+        description: OWASP ZAP is an open-source web application security scanner.
+        url: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+    services:
+      - name: 42Crunch
+        description: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+        url: https://www.42crunch.com/
+    links:
+      - title: Security (API Evangelist)
+        url: http://security.apievangelist.com/
+    items:
+
+      - name: Overview
+        description: The overview of security practices for this service.
+        instruction: Provide the URL of the security practices overview page.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-security-overview.png
+        status: None
+        fields:
+          - url: http://example.com/security/
+
+      - name: Policies
+        description: The policies in use for this service.
+        instruction: Define the security, IAM, and other policies are in place for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-policies.png
+        status: None
+        fields:
+          - assertions:
+            - title: Policy Title
+              description: This is a description for the policy.
+              url: http://example.com/policy/
+
+      - name: Tests
+        description: The security tests in use for this service.
+        instruction: Define the security tests that are conducted for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-security-tests.png
+        status: None
+        fields:
+          - tests:
+            - title: Security Test Title
+              description: This is a description for the test.
+              url: http://example.com/security/
+            - title: Security Test Title
+              description: This is a description for the test.
+              url: http://example.com/security/
+
+      - name: Results
+        description: The results of security for this service.
+        instruction: Provide real time details of security testing activity.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-results.png
+        status: None
+        fields:
+          - entries:
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+            - title: Test Status
+              date: 1/1/2019
+              description: This is a description for the item.
+
+  #-----------
+  # Discovery
+  #-----------
+  - name: Discovery
+    title: Discovery
+    description: Making sure that all APIs are discoverable by default, and able to be easily registered in aPI catalogs, and able to be included in search indexes, and API discovery services. Baking API discovery into the regular operations of each service being deployed.
+    header: The definitions for this service.
+    footer:
+    instructions: Defining the discovery aspects for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-discovery.png
+    status: None
+    items:
+
+      - name: API.json
+        description: The API discovery document for this service.
+        instruction: Publish an API Discovery (APIs.json) index for the project.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/api-commons-icon.png
+        status: None
+        fields:
+          - url: http://example.com/api-discovery.json
+
+      - name: OpenAPI
+        description: The complete OpenAPI for this service.
+        instruction: Provide URL for all OpenAPI definitions and index in API discovery index.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png
+        status: None
+        fields:
+          - url: http://example.com/openapi.json
+
+      - name: Postman Collection
+        description: The Postman Collection for this service.
+        instruction: Provide URL for all Postman Collections and index in API discovery index.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-postman.png
+        status: None
+        fields:
+          - url: http://example.com/postman.json
+
+  #----------
+  # Analysis
+  #----------
+  - name: Analysis
+    title: Analysis
+    description: Measuring, quantifying, and analyzing the usage of all APIs to make sure the platform is aware of how all APIs are being put to to use, and that teams are able to respond to any type of activity on the platform in near real time.
+    header: The definitions for this service.
+    footer:
+    instructions: Define the analysis in play for this service.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-analysis.png
+    status: None
+    services:
+      - name: Axway
+        description: API management platform offering a suite of services.
+        url: https://www.axway.com/en
+        status: None
+    items:
+
+      - name: Traffic
+        description: The traffic information for this service.
+        instruction: Document traffic to the service portal.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-traffic-light.png
+        status: None
+        fields:
+          - url: http://example.com/traffic/
+
+      - name: Usage
+        description: The usage information for this service.
+        instruction: Document usage of APIs for the service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-usage.png
+        status: None
+        fields:
+          - url: http://example.com/usage/
+
+      - name: SLA
+        description: The service level agreement for this service.
+        instruction: Document whether the SLA was met for this service.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-service-level-agreements.png
+        status: None
+        fields:
+          - url: http://example.com/sla/
+
+  #----------
+  # Stages
+  #----------
+  - name: Stages
+    title: Stages
+    description: Understanding what the stages are for each service, defining the overall maturity of each service, and understanding the road from inception to production.
+    header: The definitions for this service.
+    footer:
+    instructions: Define the stages that are applied to this lifecycle outline.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-stages.png
+    items:
+
+      - name: Prototype
+        description: When a prototype of this service is being developed.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-prototype.png
+
+      - name: Development
+        description: When a production instance of service is being developed.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-developer-tools.png
+
+      - name: Production
+        description: When a production instance of service is being operated.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-definitions-gears.png
+
+  #----------
+  # Maintenance
+  #----------
+  - name: Maintenance
+    title: Maintenance
+    description: Defining what maintenance looks like for each service, defining what is needed to keep a service running, and meeting the recurring needs of each API being made available.
+    header: The definitions for this service.
+    footer:
+    instructions: Define the maintenance cycles applied to this lifecycle outline.
+    image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tool-right.png
+    items:
+
+      - name: Weekly
+        description: Provide a version of this outline that should be considered weekly.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-calendar-change.png
+
+      - name: Monthly
+        description: Provide a version of this outline that should be considered monthly.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-calendar-change.png
+
+      - name: Releases
+        description: Provide a version of this outline that should be considered for each release.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-calendar-change.png
+
+      - name: Governance
+        description: Provide an outline of how this outline is measured, reported, and evolved.
+        image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-calendar-change.png
+
+#------------------
+# General Settings
+#------------------
+markdown: kramdown
+permalink: /:categories/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
+paginate: 1000
+paginate_path: "/updates/page:num"

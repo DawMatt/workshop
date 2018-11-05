@@ -1269,7 +1269,7 @@ stops:
   #--------
   - name: Portal
     title: Portal / Landing Page
-    description: Providing one, or many public or private portals, providing a single known location for API proviers and API consumers to find what they are looking for when it comes to API integration with services being made available.
+    description: Providing one, or many public or private portals, providing a single known location for API providers and API consumers to find what they are looking for when it comes to API integration with services being made available.
     header: The portal landing page for this service, providing a single location to access the service.
     footer: Providing a single known location discovery and return when information about service is needed.
     instructions: Define the public or private portal in use to present this service.
@@ -1335,7 +1335,7 @@ stops:
   #-----------------
   - name: Getting Started
     title: Getting Started
-    description: Providing basic getting started information for dvelopers to use when on-boarding.
+    description: Providing basic getting started information for developers to use when on-boarding.
     header: These are the steps you need to take when getting started using this service.
     footer: If you have any questions, feel free to reach out, and I'll do my best to help.
     instructions: Provide a getting started page for this service within portal.
@@ -1675,7 +1675,7 @@ stops:
   #------
   - name: FAQs
     title: Frequently Asked Questions (FAQ)
-    description: Providing a self-service listing of the most common questions that get asked of a service, so that API consumers will to have to ask the question, and put support channels to work, resulting in additional resources being required to support the platform.
+    description: Providing a self-service listing of the most common questions that get asked of a service, so that API consumers will not have to ask the question, and put support channels to work, resulting in additional resources being required to support the platform.
     header: These are the frequently asked questions (FAQ) for this service, reflecting the questions most asked by consumers of this service.
     footer: If you have a question, and you don't find the answer listed here, feel free to use one of the support channels above to get it answered.
     instructions: Publish a list of the frequently asked questions (FAQ) for this service.
@@ -1978,7 +1978,7 @@ stops:
   #------------
   - name: Monitoring
     title: Monitoring
-    description: Making sure all aspects of a service is being monitored, understanding the overall availability of a service, and whether or not a service is being delivered as expected, and meeting the SLA as promised.
+    description: Making sure all aspects of a service are being monitored, understanding the overall availability of a service, and whether or not a service is being delivered as expected, and meeting the SLA as promised.
     header: The definitions for this service.
     footer:
     instructions: Defining the uptime monitoring for this service.
@@ -2095,7 +2095,7 @@ stops:
   #-------------
   - name: Performance
     title: Performance
-    description: Testing each service for performance, benchmarking the speed in which resources are being delivered from multiple regions, working to understand and establish what the baseline speed for each API is, and understanding if the service is meeting, or falling beneath expectations.
+    description: Testing each service for performance, benchmarking the speed at which resources are being delivered from multiple regions, working to understand and establish what the baseline speed for each API is, and understanding if the service is meeting, or falling beneath expectations.
     header: The definitions for this service.
     footer:
     instructions: Defining the performance monitoring for this service.
@@ -2229,7 +2229,7 @@ stops:
   #-----------
   - name: Discovery
     title: Discovery
-    description: Making sure that all APIs are discoverable by default, and able to be easily registered in aPI catalogs, and able to be included in search indexes, and API discovery services. Baking API discovery into the regular operations of each service being deployed.
+    description: Making sure that all APIs are discoverable by default, and able to be easily registered in API catalogs, and able to be included in search indexes, and API discovery services. Baking API discovery into the regular operations of each service being deployed.
     header: The definitions for this service.
     footer:
     instructions: Defining the discovery aspects for this service.

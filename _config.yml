@@ -119,7 +119,7 @@ stops:
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-services.png
         status: Active
         fields:
-          - service_description: This is a location API, providing many of the common building blocks of location for use in any application. Providing the essential location ingredients needed through a variety of applications, without having to reivent the wheel each times it is needed. This API is still being working on, and not quite ready for prime time, but if you have any questions, visit the road map and support sections below the documentation
+          - service_description: This is a location API, providing many of the common building blocks of location for use in any application. Providing the essential location ingredients needed through a variety of applications, without having to reinvent the wheel each times it is needed. This API is still being working on, and not quite ready for prime time, but if you have any questions, visit the road map and support sections below the documentation
 
       - name: Service Goals
         description: Providing some basic goals for this service, helping clearly articulate why this service is being delivered, providing insight beyond the obvious about why this service is worthy of being developed, and operated in production.
@@ -130,10 +130,10 @@ stops:
           - service_goals: This is the goals for this service.
             goals:
               - name: Provide Locations
-                descripton: Provide a set of cities, states, countries, and other location specific data for use across other applications.
+                description: Provide a set of cities, states, countries, and other location specific data for use across other applications.
 
       - name: Schema
-        description: JSON schema for the data behind service, providing a stanalone JSON schema for use in other systems, applications, and services. Doing the heavy lifting of describing the objects, fields, types, and other technical details of the data behind this service.
+        description: JSON schema for the data behind service, providing a standalone JSON schema for use in other systems, applications, and services. Doing the heavy lifting of describing the objects, fields, types, and other technical details of the data behind this service.
         instruction: Organize loose, and JSON schema for the service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-schema.png
         status: Active
@@ -153,7 +153,7 @@ stops:
             url: https://www.jsonschema.net/
 
       - name: OpenAPI
-        description: An OpenAPI definition for the surface area of the API, providing a machine readable contract for what this service delivers, that can be used across the API lifecycle, guiding everying aspect of delivering this service.
+        description: An OpenAPI definition for the surface area of the API, providing a machine readable contract for what this service delivers, that can be used across the API lifecycle, guiding every aspect of delivering this service.
         instruction: Establish an OpenAPI for the service.
         image: https://s3.amazonaws.com/kinlane-productions/openapi/openapi-icon.png
         status: None
@@ -287,7 +287,7 @@ stops:
           - url: /v1
 
       - name: Path(s)
-        description: The paths that are used to define each individual API resource, providing a plain language descrption of a resource, with a meaningful, logical, structured path for accessing each individual resource.
+        description: The paths that are used to define each individual API resource, providing a plain language description of a resource, with a meaningful, logical, structured path for accessing each individual resource.
         instruction: Define a set of resource paths for the service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-path-resource.png
         status: Active
@@ -691,7 +691,7 @@ stops:
           - name: Mockable
             description: Mockable is a simple configurable service to mock out RESTful API or SOAP web-services. Reply with static or dynamic JSON or XML Payload.
             url: https://www.mockable.io/
-          - name: Mocklab
+          - name: MockLab
             description: Rapidly simulate APIs for faster parallel development and more comprehensive testing
             url: https://get.mocklab.io/
         tools:
@@ -703,7 +703,7 @@ stops:
             url: https://github.com/danielgtaylor/apisprout
 
       - name: Data
-        description: Considering offering synethic data for use by integrators, helping ensure virtualized APIs provide as production like experience in a virtualized way.
+        description: Considering offering synthetic data for use by integrators, helping ensure virtualized APIs provide as production like experience in a virtualized way.
         instruction: Providing synthesized data behind each API response for service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-relational-data.png
         status: None
@@ -812,7 +812,7 @@ stops:
         fields:
           - pipeline: none
         services:
-          - name: Jekins
+          - name: Jenkins
             description: Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems.
             url: https://jenkins.io/
 
@@ -961,7 +961,7 @@ stops:
   #--------------
   - name: Authentication
     title: Authentication
-    description: Providing a standardized approach to authenticating with the service, allowing consumers to successfuly, and securely access a service.
+    description: Providing a standardized approach to authenticating with the service, allowing consumers to successfully, and securely access a service.
     header:
     footer:
     instructions: Details regarding authentication in use for this service.
@@ -1007,7 +1007,7 @@ stops:
           - footer: We try to keep API authentication as simple as possible, while also ensuring the data we provide is securely accessed.
           - url: http://public.companies.apievangelist.com#authentication
 
-      - name: Signup / Login
+      - name: Sign up / Login
         description: An overview for the authentication of this service.
         instruction: Provide a location of the page that delivers an overview of this services authentication.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
@@ -1015,7 +1015,7 @@ stops:
         fields:
           - title: Signing Up / Logging In For The API
           - header: I don't make you sign up for yet another account, we just use your OAuth from your GitHub, Twitter, or LinkedIn.
-          - footer: I'm not interested in your data, and do not pull any other data from your accounts beyond the scaope requested.
+          - footer: I'm not interested in your data, and do not pull any other data from your accounts beyond the scope requested.
           - url: http://public.companies.apievangelist.com#sign-up-login
 
   #------------
@@ -1064,9 +1064,9 @@ stops:
         fields:
           - url: https://console.aws.amazon.com/apigateway/home?region=us-east-1
 
-      - name: Signup
+      - name: Sign up
         description: Where you can sign up for access to this service.
-        instruction: Provide a location for users to signup for access to this service.
+        instruction: Provide a location for users to sign up for access to this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
         status: Active
         fields:
@@ -1081,7 +1081,7 @@ stops:
           - url: http://locations.apievangelist.com/
 
       - name: Account
-        description: Where you can access accouint information when using service.
+        description: Where you can access account information when using service.
         instruction: Provide a location for users to access a dashboard for this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-account-settings.png
         status: None
@@ -1346,10 +1346,10 @@ stops:
         url: http://getting-started.apievangelist.com/
     items:
 
-      - name: Signup
-        title: Signup
-        description: Where you can signup for this service.
-        instruction: Provide a link to where users can signup for this service.
+      - name: Sign up
+        title: Sign up
+        description: Where you can sign up for this service.
+        instruction: Provide a link to where users can sign up for this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-signup.png
         status: None
         fields:
@@ -1417,7 +1417,7 @@ stops:
     items:
 
       - name: Paths
-        description: Documentng the API paths that are available for this service.
+        description: Documenting the API paths that are available for this service.
         instruction: Publish an interactive list of API paths available for service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-path-2.png
         status: Active
@@ -1449,7 +1449,7 @@ stops:
       - name: Definitions
         header: We provide machine readable definitions for our APIs, allowing you to import into the service or tooling of your choice.
         footer: Feel free to submit a pull request for these API definitions using GitHub, or submit an issue when you see something incomplete.
-        description: The machine reaable API definitions for use as part of this service.
+        description: The machine readable API definitions for use as part of this service.
         instruction: Publish a list of schema definitions in use by this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-definitions.png
         status: Active
@@ -1743,8 +1743,8 @@ stops:
   - name: Communication
     title: Staying In Tune
     description: Having a comprehensive communication strategy for a service, ensuring that each service is properly communicating with other teams, stakeholders, and API consumers. Providing a regular stream of information regarding what is happening with the service.
-    header: Here are the commmunication channels provided to you, helping you stay in tune with what is changing with this service, and the overall platform behind it.
-    footer: These channels should provide you with a regular hearbeat of the changes being made, and what is being planned as part of this platform's operations.
+    header: Here are the communication channels provided to you, helping you stay in tune with what is changing with this service, and the overall platform behind it.
+    footer: These channels should provide you with a regular heartbeat of the changes being made, and what is being planned as part of this platform's operations.
     instructions: Establish a communication strategy for this service.
     image: http://locations.apievangelist.com/assets/images/communication.png
     status: Active
@@ -2158,7 +2158,7 @@ stops:
   #----------
   - name: Security
     title: Security
-    description: Going beyond authentication, encryption and other aspects of security, and working to scan the surface area of APIs to ensure that there are no vulnerabilities, and that APIs are not doing anything they should not be doing. Keeping services secure, and operating reliabily.
+    description: Going beyond authentication, encryption and other aspects of security, and working to scan the surface area of APIs to ensure that there are no vulnerabilities, and that APIs are not doing anything they should not be doing. Keeping services secure, and operating reliably.
     header: The definitions for this service.
     footer:
     instructions: Defining the security practices in place for this service.

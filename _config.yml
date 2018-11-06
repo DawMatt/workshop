@@ -3,7 +3,7 @@
 #---------------------
 title: API Evangelist Location API
 description: This is a location API, providing many of the common building blocks of location. Providing the essential location ingredients needed through a variety of applications, without having to reinvent the wheel each times it is needed. This API is still being working on, and not quite ready for prime time, but if you have any questions, visit the road map and support sections below the documentation.
-url: http://location.apievangelist.com
+url: http://locations.apievangelist.com
 tag: Location, Cities, Regions, Countries
 logo: https://kinlane-productions.s3.amazonaws.com/api-evangelist/api-evangelist-logo-400.png
 
@@ -114,7 +114,7 @@ stops:
           - service_name: API Evangelist Location API
 
       - name: Service Description
-        description: A simple, descriptive paragraph for this service. Providing less that 250 words about what value this service delivers. Avoid just writing the obvious, and describing what an APIs, and focusing in on describing the value being delivered by this service.
+        description: A simple, descriptive paragraph for this service. Providing less that 250 words about what value this service delivers. Avoid just writing the obvious, and describing what an API is, and focusing in on describing the value being delivered by this service.
         instruction: Provide concise description for the service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-dependencies-services.png
         status: Active
@@ -171,7 +171,7 @@ stops:
         status: Active
         elements:
           - title: Context
-            description: Describing the setting and meaning the defines the value of this service.
+            description: Describing the setting and meaning that defines the value of this service.
           - title: Model
             description: The system of models used to define the elements of the domain this service.
           - title: Language
@@ -205,7 +205,7 @@ stops:
             url: https://www.eventstorming.com/
 
       - name: Tags
-        description: Defining what the tagging taxonomy will be for applying across resources, for use in tagging across definitions, documentation, and infrastructure operations.
+        description: Defining what tagging taxonomy will be applied across resources, for use in tagging across definitions, documentation, and infrastructure operations.
         instruction: Provide a list of tags that will be used to organize schema, resources, infrastructure, and other elements of this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag.png
         status: Active
@@ -328,7 +328,7 @@ stops:
             url: http://journey.apievangelist.com/journey/design/headers
 
       - name: Body
-        description: Usage of the body as part of API requests as opposed to parameters, or in parallel to. Is the body used for POST, PUT, and other variations to help manage the payload.
+        description: Usage of the body as part of API requests as opposed to parameters, or in parallel to. Is the body used for POST, PUT, and other variations to help manage the payload?
         instruction: Define the details of the body that will be used as part of making request to this service.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-body.png
         status: Active
@@ -347,7 +347,7 @@ stops:
             url: https://philsturgeon.uk/rest/2014/05/11/restful-urls-actions-need-not-apply/
 
       - name: Media Types
-        description: The media types that are used by this service, as described by the OpenAPI. Providing multiple representations of a resource, allowing consumer to negotiate the type of content.
+        description: The media types that are used by this service, as described by the OpenAPI. Provide multiple representations of a resource, allowing the consumer to negotiate the type of content.
         instruction: Define whether service will return CSV, JSON, and / or XML responses.
         image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-media-type.png
         status: Active
